@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-_a)4o_vm6j=6u2ie_n8%fh03&a7t6%7+1s^4e!r1r-1c*8qe(-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rith-weatherapp-django.up.railway.app', 'localhost','127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://rith-weatherapp-django.up.railway.app']
+ALLOWED_HOSTS = ['rith-weatherappdjango.up.railway.app', 'localhost','127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://rith-weatherappdjango.up.railway.app']
 
 # Application definition
 
@@ -83,11 +83,11 @@ load_dotenv()  # Load environment variables from .env file
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DATABASE_NAME', 'railway'),
-        'USER': os.getenv('DATABASE_USER', 'postgres'),
-        'PASSWORD': os.getenv('DATABASE_PASSWORD', 'KQeUCjiXJfSsVKNRDjNuMxrgZbzIMoJi'),
-        'HOST': os.getenv('DATABASE_HOST', 'yamanote.proxy.rlwy.net'),
-        'PORT': os.getenv('DATABASE_PORT', '22002'),
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 
